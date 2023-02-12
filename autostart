@@ -12,7 +12,6 @@ xsetroot -solid '#000000'
 
 # remove all existing keybindings
 hc keyunbind --all
-
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
 #Mod=Mod1    # Use alt as the main modifier
@@ -24,10 +23,14 @@ hc keybind $Mod-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-xfce4-terminal}" # use your $TERMINAL with xterm as fallback
 
 hc keybind $Mod-d spawn rofi -show drun
+hc keybind $Mod-Mod1-s spawn rofi -terminal "alacritty" -show ssh
 hc keybind $Mod-w spawn rofi -show window
 hc keybind $Mod-Shift-Return spawn ~/.config/herbstluftwm/herbscript/official/scratchpad.sh
 hc keybind $Mod-Shift-w spawn ~/.config/herbstluftwm/herbscript/official/windowmenu.sh
+hc keybind $Mod-Shift-s spawn scrot -s
 
+hc keybind XF86MonBrightnessUp spawn brightnessctl s 5%+
+hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -136,6 +139,7 @@ hc attr theme.title_height 15
 hc attr theme.title_when one_tab
 # hc attr theme.title_font 'Noto Sans:pixelsize=14'  # example using Xft
 hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
+# hc attr theme.title_font '-noto-sans-medium-r-normal-13-*-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
 hc attr theme.active.color '#707cff'
 hc attr theme.title_color '#ffffff'
@@ -190,16 +194,21 @@ hc unlock
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
 # or simply:
+hc spawn ~/.config/herbstluftwm/physical-screen-layouts/main_screen_layout.sh
 hc detect_monitors
 
-# find the panel
-panel=~/.config/herbstluftwm/panel.sh
-[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(hc list_monitors | cut -d: -f1) ; do
-    # start it on each monitor
-    "$panel" "$monitor" &
-done
+# # find the panel
+# panel=~/.config/herbstluftwm/panel.sh
+# [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+# for monitor in $(hc list_monitors | cut -d: -f1) ; do
+#     # start it on each monitor
+#     "$panel" "$monitor" &
+# done
 
 # autostart application
+setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:­scroll us,th
+killall -q polybar
 picom -b
 nitrogen --restore
+polybar
+nm-applet
