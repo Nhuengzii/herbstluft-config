@@ -28,7 +28,7 @@ hc keybind $Mod-Mod1-s spawn rofi -terminal "kitty" -show ssh
 hc keybind $Mod-w spawn rofi -show window
 hc keybind $Mod-Shift-Return spawn ~/.config/herbstluftwm/herbscript/official/scratchpad.sh
 hc keybind $Mod-Shift-w spawn ~/.config/herbstluftwm/herbscript/official/windowmenu.sh
-hc keybind $Mod-Shift-s spawn scrot -s
+hc keybind $Mod-Shift-s spawn spectacle -r
 
 hc keybind XF86MonBrightnessUp spawn brightnessctl s 5%+
 hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
