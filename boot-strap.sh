@@ -8,3 +8,5 @@ for i in polybar ranger picom kitty dunst nitrogen;do
 done
 sudo cp -r ~/.config/herbstluftwm/fonts/cascadiacode /usr/share/fonts/
 fc-cache -fv
+git config --global user.emai "32nhueng@gmail.com"
+git config --global user.name "Nhuengzii"
