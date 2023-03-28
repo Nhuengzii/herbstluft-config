@@ -1,4 +1,4 @@
-yay -S polybar ranger picom kitty herbstluftwm rofi dunst nitrogen spectacle nodejs npm neovim ueberzug ly docker --noconfirm
+yay -S polybar ranger picom kitty herbstluftwm rofi dunst nitrogen spectacle nodejs npm neovim ueberzug ly docker brightnessctl --noconfirm
 sudo systemctl enable ly
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
