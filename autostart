@@ -89,14 +89,9 @@ hc keybind $Mod-c cycle +1
 # ░▀█▀░█░█░█▀▀░█▄█░█▀▀░█▀▀
 # ░░█░░█▀█░█▀▀░█░█░█▀▀░▀▀█
 # ░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░▀▀▀
-hc set frame_bg_transparent on1
+hc set frame_bg_transparent on
 hc set window_gap 5
 
-# ░█░░░█▀█░█░█░█▀█░█░█░▀█▀░█▀▀
-# ░█░░░█▀█░░█░░█░█░█░█░░█░░▀▀█
-# ░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░░▀░░▀▀▀
-hc set default_frame_layout horizontal
-herbstclient set_attr tags.by-name.1.tiling.root.algorithm horizontal
 
 # ░▀█▀░█▀█░█▀▀░█▀▀
 # ░░█░░█▀█░█░█░▀▀█
@@ -112,11 +107,20 @@ for i in "${!tag_names[@]}" ; do
         hc keybind "$Mod-Shift-$key" move_index "$i"
     fi
 done
-hc add discord
-hc add scratchpad
+extra_tags=( discord scratchpad )
+for i in "$extra_tags" ; do
+    hc add "$i"
+done
 
 # Monitor
 hc detect_monitors
+
+# ░█░░░█▀█░█░█░█▀█░█░█░▀█▀░█▀▀
+# ░█░░░█▀█░░█░░█░█░█░█░░█░░▀▀█
+# ░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░░▀░░▀▀▀
+for tag in "${tag_names[@]}" "${extra_tags[@]}" ; do
+    hc set_attr tags.by-name.$tag.tiling.root.algorithm horizontal
+done
 
 
 # ░█▀▄░█░█░█░░░█▀▀░█▀▀
