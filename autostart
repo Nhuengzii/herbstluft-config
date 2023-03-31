@@ -77,6 +77,15 @@ hc keybind $Mod-d spawn rofi -show drun
 hc keybind XF86MonBrightnessUp spawn brightnessctl s 5%+
 hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
 
+# Rofi Menu to change layout
+hc keybind $Mod-Shift-space spawn ~/.config/herbstluftwm/herbscript/set_layouts.sh
+
+# Cycle through layouts
+hc keybind $Mod-space cycle_layout +1
+
+# Cycle through clients within current frame
+hc keybind $Mod-c cycle +1
+
 # ░▀█▀░█░█░█▀▀░█▄█░█▀▀░█▀▀
 # ░░█░░█▀█░█▀▀░█░█░█▀▀░▀▀█
 # ░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░▀▀▀
