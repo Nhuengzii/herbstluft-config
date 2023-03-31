@@ -46,6 +46,7 @@ herbstclient --idle "tag_*" 2>/dev/null | {
                     '%')
                         # the tag is viewed on a different MONITOR and it is focused.
                         # TODO Add your formatting tags
+                        echo "%{F#000}%{B#F6C1B9}"
                         ;;
                     '!')
                         # the tag contains an urgent window
