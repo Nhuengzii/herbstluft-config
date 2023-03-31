@@ -77,10 +77,17 @@ hc keybind $Mod-d spawn rofi -show drun
 hc keybind XF86MonBrightnessUp spawn brightnessctl s 5%+
 hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
 
+# ░▀█▀░█░█░█▀▀░█▄█░█▀▀░█▀▀
+# ░░█░░█▀█░█▀▀░█░█░█▀▀░▀▀█
+# ░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░▀▀▀
+hc set frame_bg_transparent on1
+hc set window_gap 5
+
 # ░█░░░█▀█░█░█░█▀█░█░█░▀█▀░█▀▀
 # ░█░░░█▀█░░█░░█░█░█░█░░█░░▀▀█
 # ░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░░▀░░▀▀▀
 hc set default_frame_layout horizontal
+herbstclient set_attr tags.by-name.1.tiling.root.algorithm horizontal
 
 # ░▀█▀░█▀█░█▀▀░█▀▀
 # ░░█░░█▀█░█░█░▀▀█
