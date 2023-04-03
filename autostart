@@ -49,12 +49,8 @@ hc keybind $Mod-Control-Down resize down +$resizestep
 hc keybind $Mod-Control-Up resize up +$resizestep
 hc keybind $Mod-Control-Right resize right +$resizestep
 
-# # cycle through tags
-# hc keybind $Mod-Tab use_index +1 --skip-visible
-# hc keybind $Mod-Shift-Tab use_index -1 --skip-visible
-
 # Peak Left Peak Right
-hc keybind $Mod-q use_index -1 --skip-visible
+hc keybind $Mod-Tab use_index -1 --skip-visible
 hc keybind $Mod-e use_index +1 --skip-visible
 
 # cyle through monitors
@@ -67,7 +63,7 @@ hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
 # Close App
-hc keybind $Mod-Shift-q close
+hc keybind $Mod-q close
 
 # Reload Config
 hc keybind $Mod-Shift-r reload
