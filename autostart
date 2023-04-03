@@ -86,6 +86,9 @@ hc keybind $Mod-space cycle_layout +1
 # Cycle through clients within current frame
 hc keybind $Mod-c cycle +1
 
+# Fullscreen Toggle
+hc keybind $Mod-f fullscreen toggle
+
 # ░▀█▀░█░█░█▀▀░█▄█░█▀▀░█▀▀
 # ░░█░░█▀█░█▀▀░█░█░█▀▀░▀▀█
 # ░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░▀▀▀
