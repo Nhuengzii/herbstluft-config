@@ -10,3 +10,4 @@ sudo cp -r ~/.config/herbstluftwm/fonts/cascadiacode /usr/share/fonts/
 fc-cache -fv
 git config --global user.email "32nhueng@gmail.com"
 git config --global user.name "Nhuengzii"
+git config --global init.defaultBranch main
