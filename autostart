@@ -118,6 +118,7 @@ extra_tags=( discord scratchpad )
 for i in "$extra_tags" ; do
     hc add "$i"
 done
+hc keybind $Mod-Shift-w move scratchpad
 
 # Monitor
 hc detect_monitors
