@@ -89,13 +89,6 @@ hc keybind $Mod-c cycle +1
 # Fullscreen Toggle
 hc keybind $Mod-f fullscreen toggle
 
-hc keybind $Mod-Ctrl-s mktemp string T1 T2 chain \
-    , substitute M1 monitors.focus.index substitute T monitors.focus.my_tag get_attr monitors.[M1].my_tag T1 \
-    , focus_monitor 1 \
-    , substitute M2 monitors.focus.index substitute T monitors.focus.my_tag get_attr monitors.[M2].my_tag T2 \
-    , use_attr T1 \
-    , focus_monitor 0 \
-    , use_attr T2
 
 
 # ░▀█▀░█░█░█▀▀░█▄█░█▀▀░█▀▀
