@@ -89,6 +89,8 @@ hc keybind $Mod-c cycle +1
 # Fullscreen Toggle
 hc keybind $Mod-f fullscreen toggle
 
+# Change window
+hc keybind $Mod-w spawn rofi -show window
 
 
 # ░▀█▀░█░█░█▀▀░█▄█░█▀▀░█▀▀
