@@ -129,6 +129,7 @@ hc detect_monitors
 for tag in "${tag_names[@]}" "${extra_tags[@]}" ; do
     hc set_attr tags.by-name.$tag.tiling.root.algorithm horizontal
 done
+hc set_attr tags.by-name.$tag.tiling.root.algorithm max
 
 
 # ░█▀▄░█░█░█░░░█▀▀░█▀▀
