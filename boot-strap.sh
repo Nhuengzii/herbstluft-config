@@ -1,4 +1,4 @@
-yay -S polybar ranger picom kitty herbstluftwm rofi dunst nitrogen nodejs npm neovim ueberzug docker brightnessctl go github-cli zsh cargo lazygit --noconfirm
+yay -S polybar ranger picom kitty herbstluftwm rofi dunst nitrogen nodejs npm neovim ueberzug docker brightnessctl go github-cli zsh cargo lazygit noto-fonts-emoji --noconfirm
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
