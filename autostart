@@ -163,10 +163,10 @@ setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:­scroll us,th
 spawn_polybar() {
     if type "xrandr"; then
         for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-            MONITOR=$m polybar --reload main &
+            MONITOR=$m polybar main -c "~/.config/herbstluftwm/polybar/themes/shapes/config.ini" &
         done
     else
-        polybar --reload main &
+        polybar main -c "~/.config/herbstluftwm/polybar/themes/shapes/config.ini" &
     fi
 }
 pgrep "polybar" > "/dev/null" || spawn_polybar
