@@ -145,7 +145,7 @@ hc set_attr tags.by-name.scratchpad.tiling.root.algorithm max
 hc unrule -F
 hc rule focus=on
 hc set tree_style '╾│ ├└╼─┐'
-hc set swap_monitors_to_get_tag 0
+hc set swap_monitors_to_get_tag 1
 # rules for discord
 hc rule class="discord" tag="discord"
 hc keybind $Mod-Shift-d spawn ~/.config/herbstluftwm/herbscript/official/scratchpad.sh discord
