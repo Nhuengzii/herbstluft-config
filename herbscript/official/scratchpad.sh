@@ -22,7 +22,8 @@ height=${mrect[3]}
 
 rect=(
     $((width/2))
-    $((height/2))
+    # $((height/2))
+    $((height/2 + 70))
     $((${mrect[0]}+(width/4)))
     $((${mrect[1]}+(height/4)))
 )
