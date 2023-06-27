@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILE="$HOME/.config/polybar/shapes/glyphs.ini"
+FILE="$HOME/.config/polybar/themes/shapes/glyphs.ini"
 
 # Replace Glyphs
 change_style() {

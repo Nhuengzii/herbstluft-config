@@ -2,7 +2,7 @@
 
 # Add this script to your wm startup file.
 
-DIR="$HOME/.config/polybar/shapes"
+DIR="$HOME/.config/polybar/themes/shapes"
 
 # Terminate already running bar instances
 killall -q polybar
